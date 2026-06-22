@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use function PHPUnit\Framework\returnArgument;
 
 class ProductController extends Controller
 {
@@ -12,7 +13,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+      return view('backend.product.index');
     }
 
     /**
@@ -20,7 +21,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+      return view('backend.product.create');
     }
 
     /**

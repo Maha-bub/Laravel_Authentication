@@ -60,10 +60,10 @@
                      <div class="menu-title">eCommerce</div>
                  </a>
                  <ul>
-                     <li> <a href="ecommerce-add-product.html"><span
+                     <li> <a href="{{route('product.create')}}"><span
                                  class="material-symbols-outlined">arrow_right</span>Add Product</a>
                      </li>
-                     <li> <a href="ecommerce-products.html"><span
+                     <li> <a href="{{ route('product.index') }}"><span
                                  class="material-symbols-outlined">arrow_right</span>Products</a>
                      </li>
                      <li> <a href="ecommerce-customers.html"><span
