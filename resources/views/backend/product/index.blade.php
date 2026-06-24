@@ -30,6 +30,11 @@
             </div>
         </div>
         <!--end breadcrumb-->
+         @session('succes')
+                    <div class="alert alert-success" role="alert">
+                        {{ $value }}
+                    </div>
+                @endsession
 
         <h6 class="mb-0 text-uppercase">Product Information</h6>
         <hr>

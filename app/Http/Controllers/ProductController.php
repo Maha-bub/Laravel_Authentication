@@ -29,7 +29,26 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $products=new Product;
+        $products->name=$request->name;
+        $products->category=$request->category;
+        $products->description=$request->description;
+        $products->price=$request->price;
+        $products->status=$request->stock;
+
+        $randNumber=rand(1,50);
+        $photoType=$request->photo->extension();
+        $photoExtension=strtolower($photoType);
+        $photoName=$randNumber.time().".".$photoExtension;
+
+        $request->photo->move(public_path('assets/images'));
+        $products->image='images/'.$photoName;
+    //   dd($request);
+
+    $products->save();
+    return redirect('/admin/product')->with('succes', 'Product added successfully!');
+
     }
 
     /**
