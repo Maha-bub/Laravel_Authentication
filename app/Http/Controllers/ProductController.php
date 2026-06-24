@@ -46,7 +46,8 @@ class ProductController extends Controller
         $photoExtension=strtolower($photoType);
         $photoName=$randNumber.time().".".$photoExtension;
 
-        $request->photo->move(public_path('assets/images'));
+        $request->photo->move(public_path('assets/images'),$photoName
+        );
         $products->image='images/'.$photoName;
     //   dd($request);
 
