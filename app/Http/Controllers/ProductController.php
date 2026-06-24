@@ -29,6 +29,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // validation and old data show to the input box is due
+
+
+        // send request data to the database
 
         $products=new Product;
         $products->name=$request->name;
