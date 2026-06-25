@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use function PHPUnit\Framework\returnArgument;
@@ -22,7 +22,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('backend.product.create');
+        $cat_all=Category::all();
+        return view('backend.product.create', ['items' => $cat_all]);
     }
 
     /**

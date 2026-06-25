@@ -44,7 +44,7 @@
                                     <td>{{ $item->name }}</td>
                                     <td> <img style="width: 50px" src="{{ asset($item->image) }}" alt=""></td>
                                     <td>{{ $item->price }}</td>
-                                    <td>{{ $item->category?->category_name }}</td>
+                                    {{-- <td>{{ $item->category?->category_name }}</td> --}}
                                     <td>{{ $item->status }}</td>
                                     <td> Edit | Delete</td>
 

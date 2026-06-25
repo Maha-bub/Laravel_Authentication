@@ -49,9 +49,10 @@
                             <div class="col-6">
                                 <label for="AddCategory" class="form-label fw-bold">Category</label>
                                 <select class="form-select" name="category" id="AddCategory">
-                                    <option value="0">Man</option>
-                                    <option value="1">Women</option>
-                                    <option value="2">Child</option>
+                                    <option value="0">Select One</option>
+                                    @foreach ( $items as $item)
+                                        <option value="{{ $item->id }}">{{ $item->category_name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
 
