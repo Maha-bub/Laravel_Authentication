@@ -33,15 +33,15 @@ class ProductController extends Controller
     {
 
         // validation and old data show to the input box is due
-        $request->validate([
-            'name' => 'required|min:4|max:50',
-            'price' => 'required|numeric',
-            'category' => 'required',
-            'status' => 'required',
-            'stock' => 'required|numeric',
-            'image' => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
-            'description' => 'nullable',
-        ]);
+        // $request->validate([
+        //     'name' => 'required|min:4|max:50',
+        //     'price' => 'required|numeric',
+        //     'category' => 'required',
+        //     'status' => 'required',
+        //     'stock' => 'required|numeric',
+        //     'image' => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
+        //     'description' => 'nullable',
+        // ]);
 
         // send request data to the database
 

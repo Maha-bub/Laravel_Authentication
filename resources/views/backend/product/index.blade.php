@@ -3,20 +3,6 @@
     <link href="{{ asset('') }}assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 @endpush
 
-@push('scripts')
-    <script src="{{ asset('') }}assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var table = $("#example2").DataTable({
-                lengthChange: false,
-                buttons: ["copy", "excel", "pdf", "print"],
-            });
-
-            table.buttons().container()
-                .appendTo("#example2_wrapper .col-md-6:eq(0)");
-        });
-    </script>
-@endpush
 
 @section('content')
     <main class="page-content">
@@ -42,10 +28,10 @@
                             @foreach ($items as $item)
                                 <tr>
                                     <td>{{ $item->name }}</td>
-                                    <td> <img style="width: 50px" src="{{ asset('assets/')."/".$item->image }}"
+                                    <td> <img style="width: 50px" src="{{ asset('assets/') . '/' . $item->image }}"
                                             alt=""></td>
                                     <td>{{ $item->price }}</td>
-                                    {{-- <td>{{ $item->category?->category_name }}</td> --}}
+                                    <td>{{ $item->category }}</td>
                                     <td>{{ $item->status }}</td>
                                     <td> Edit | Delete</td>
 
@@ -78,4 +64,20 @@
 
 
     </main>
+
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('') }}assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var table = $("#example2").DataTable({
+                lengthChange: false,
+                buttons: ["copy", "excel", "pdf", "print"],
+            });
+
+            table.buttons().container()
+                .appendTo("#example2_wrapper .col-md-6:eq(0)");
+        });
+    </script>
+@endpush
