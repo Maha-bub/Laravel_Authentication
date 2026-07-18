@@ -37,10 +37,13 @@
 
                         <div class="row g-3 my-4">
                             <div class="col-12 col-lg-6">
-                                <button
-                                    class="btn btn-light py-2 font-text1 fw-bold d-flex align-items-center justify-content-center w-100"><img
-                                        src="assets/images/icons/google-2.png" width="18" class="me-2"
-                                        alt="">Log In with Google</button>
+                                <a class="btn btn-light py-2 font-text1 fw-bold d-flex align-items-center justify-content-center w-100"
+                                    href="{{ route('auth.google') }}">
+                                    <img src="assets/images/icons/google-2.png" width="18" class="me-2"
+                                        alt="">
+
+                                    Log In with Google
+                                </a>
                             </div>
                             <div class="col col-lg-6">
                                 <button
@@ -62,7 +65,7 @@
                             <form class="row g-3" method="post" action="{{ route('login') }}">
                                 @csrf
                                 <div class="col-12">
-                                    <label for="inputEmailAddress"  class="form-label">Email</label>
+                                    <label for="inputEmailAddress" class="form-label">Email</label>
                                     <input type="email" name="email" class="form-control" id="inputEmailAddress"
                                         placeholder="jhon@example.com">
                                 </div>
@@ -97,6 +100,7 @@
                                     </div>
                                 </div>
                             </form>
+
                         </div>
 
                     </div>
